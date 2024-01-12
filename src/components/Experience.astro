@@ -1,0 +1,37 @@
+---
+import ExperiencieItem from "./ExperiencieItem.astro"
+
+
+const EXPERIENCIE = [
+    {
+        title : 'Desarrollador Web',
+        date : 'Enero, 2024',
+        actual :'Actualmente',
+        description : "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+       
+    }, 
+    {
+        title : 'Flowbite Application UI v2.0.0',
+        date : 'Julio, 2023',
+        description : "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+        link : 'Download ZIP'
+    },
+    {   
+        title : 'Flowbite Application UI v2.0.0',
+        date : 'Enero, 2023',
+        description : "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+        
+    }
+    
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700"> 
+    {
+        EXPERIENCIE.map( experiencie => (
+         <li class="mb-10 ms-6">
+            <ExperiencieItem {...experiencie}/>  
+         </li>   
+        ))
+    }                   
+</ol>
+
