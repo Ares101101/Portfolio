@@ -9,18 +9,35 @@ const PROYECTS = [
         github:'https://github.com/Ares101101/fake-videoGames-api',
         image: '/871shots_so.webp',
         tags:['NODE JS', 'HTML', 'JavaScript', 'EXPRESS'],
+    },
+    {
+        title:'Rest api deploy 🎬',
+        description: 'Rest api deploy, una plataforma construida con Node.js y Express que te permite acceder y gestionar información detallada sobre una amplia variedad de películas. Diseñada para simular datos de peliculas y editarlos 🎥🍿',
+        github:'https://github.com/Ares101101/rest-api-deploy',
+        image: '/191shots_so.webp',
+        tags:['NODE JS', 'HTML', 'JavaScript', 'EXPRESS'],
+    },
+    {
+        title:'Clone Spotify 🎶',
+        description: 'El clon de Spotify, desarrollado con React y Astro, ofrece una experiencia similiar a la pagina de spotify 🎧',
+        github:'https://github.com/Ares101101/clone-spotify',
+        image: '/753shots_so.webp',
+        tags:['ASTRO', 'TAILWIND', 'JavaScript', 'REACT'],
     }
+
 ]   
 ---
-{
-    PROYECTS.map(({title, description, tags, image, github, link})=>(
-        <ProyecCard 
-        title={title} 
-        description={description} 
-        tags={tags} 
-        image={image}
-        link={link}
-        github={github}
-        />
-    ))
-}
+ <article class=' flex  flex-col gap-8' id='Proyectos'>
+    {
+        PROYECTS.map(({title, description, tags, image, github, link})=>(
+            <ProyecCard 
+            title={title} 
+            description={description} 
+            tags={tags} 
+            image={image}
+            link={link}
+            github={github}
+            />
+        ))
+    }
+ </article>
