@@ -1,0 +1,26 @@
+---
+import ProyecCard from "./ProyecCard.astro"
+
+const PROYECTS = [
+    {
+        title:'Fake Video Games API 🎮',
+        description: 'Fake Video Games API es una interfaz de programación de aplicaciones (API) desarrollada utilizando Node.js y Express. Esta API simula datos relacionados con videojuegos, ofreciendo puntos finales para acceder y gestionar información sobre juegos, desarrolladores y editores. 🕹️👾',
+        link:'https://web-fake-video-games-api.vercel.app/#upgrade',
+        github:'https://github.com/Ares101101/fake-videoGames-api',
+        image: '/871shots_so.webp',
+        tags:['NODE JS', 'HTML', 'JavaScript', 'EXPRESS'],
+    }
+]   
+---
+{
+    PROYECTS.map(({title, description, tags, image, github, link})=>(
+        <ProyecCard 
+        title={title} 
+        description={description} 
+        tags={tags} 
+        image={image}
+        link={link}
+        github={github}
+        />
+    ))
+}

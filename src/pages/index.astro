@@ -8,6 +8,8 @@ import MailIcon from '../components/icons/Mail.astro'
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import ExperiencieIcon from '../components/icons/ExperiencieIcon.astro';
+import ProyecIcon from '../components/icons/ProyecIcon.astro';
+import Proyects from '../components/Proyects.astro';
 
 ---
 
@@ -17,7 +19,7 @@ description="Apasionado por la innovación digital, Especializado en crear exper
 >
 	<main class="px-4 w-full " 
 	data-section="top">
-		<SectionContainer class=" py-44 pb-44" id="Sobre-mí">
+		<SectionContainer class=" py-44 " id="Sobre-mí">
 			<img 
 			class=" rounded-full size-12 md:hidden block " 
 			src="https://i.postimg.cc/8Cy7xfx6/image.jpg" alt="diego foto"
@@ -61,6 +63,14 @@ description="Apasionado por la innovación digital, Especializado en crear exper
 				Experiencia Laboral
 			</h2>
 			<Experience/>
+		</SectionContainer>
+
+		<SectionContainer id="Experiencia">
+			<h2 class=" text-2xl font-semibold mb-6 flex gap-x-3 items-center dark:text-blue-300 text-blue-800">
+				<ProyecIcon class="size-7 "/>
+				Proyectos
+			</h2>
+			<Proyects/>
 		</SectionContainer>
 
 	</main>		
