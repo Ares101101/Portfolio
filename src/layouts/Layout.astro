@@ -19,17 +19,24 @@ const { description, title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/daf.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="stylesheet" href="/src/styles/stars.css">
 	</head>
-	<body>
-		<div 
-		class="absolute top-0 bottom-0 min-h-full z-[-2] h-screen w-full bg-neutral-100 dark:bg-neutral-950
-		bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
-		dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-		>
-		</div>
-		<Header />
-		<slot />
-		<Footer/>
+	<body class="  overflow-y-auto">
+		<section class="secti">
+            <span class="spanstart"></span>
+            <span class="spanstart"></span>
+            <span class="spanstart"></span>
+            <span class="spanstart"></span>
+            <span class="spanstart"></span>
+            <span class="spanstart"></span>
+            <span class="spanstart"></span>
+            <span class="spanstart"></span>
+            <span class="spanstart"></span>
+            <span class="spanstart"></span>
+        </section>
+		<Header/>
+		<slot/>
+		<Footer/>	
 	</body>
 </html>
 <style is:global>
@@ -60,4 +67,12 @@ const { description, title } = Astro.props;
 		background-color: rgb(10 10 10);
 		}
 	}
+	@mixin sp-layout {
+  @media screen and (max-width: 750px) {
+    @content;
+  }
+}
+
+
+		
 </style>
