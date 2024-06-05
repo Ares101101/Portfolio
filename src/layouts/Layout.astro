@@ -34,6 +34,11 @@ const { description, title } = Astro.props;
             <span class="spanstart"></span>
             <span class="spanstart"></span>
         </section>
+		<section class="secti2">
+			<div id="stars"></div>
+			<div id="stars2"></div>
+			<div id="stars3"></div>
+		</section>
 		<Header/>
 		<slot/>
 		<Footer/>	
@@ -64,7 +69,7 @@ const { description, title } = Astro.props;
 	@media (prefers-color-scheme: dark) {
 		body {
 		color: rgba(255, 255, 255, 0.9);
-		background-color: rgb(10 10 10);
+
 		}
 	}
 	@mixin sp-layout {
@@ -72,7 +77,6 @@ const { description, title } = Astro.props;
     @content;
   }
 }
-
 
 		
 </style>
