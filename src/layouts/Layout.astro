@@ -21,8 +21,8 @@ const { description, title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="  overflow-y-auto">
-		<section class="secti">
+	<body >
+		<section class="secti overflow-hidden z-[-1]">
             <span class="spanstart"></span>
             <span class="spanstart"></span>
             <span class="spanstart"></span>
@@ -34,13 +34,13 @@ const { description, title } = Astro.props;
             <span class="spanstart"></span>
             <span class="spanstart"></span>
         </section>
-		<section class="secti2">
+		<section class="secti2 z-[-1]">
 			<div id="stars"></div>
 			<div id="stars2"></div>
 			<div id="stars3"></div>
 		</section>
 		<Header/>
-		<slot/>
+		<slot/> 
 		<Footer/>	
 	</body>
 </html>
@@ -50,33 +50,8 @@ const { description, title } = Astro.props;
 	}
 	html {
 		font-family: "Onest Variable", system-ui, sans-serif;
-		scroll-behavior: smooth;
+		padding: 0;
+		margin: 0;
   	}
-	body {
-		color: rgba(17, 17, 17, 0.9);
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-		overscroll-behavior: none;
-  	}
-
-	@media (prefers-reduced-motion: reduce) {
-		html {
-		scroll-behavior: auto;
-		}
-	}
-
-	@media (prefers-color-scheme: dark) {
-		body {
-		color: rgba(255, 255, 255, 0.9);
-
-		}
-	}
-	@mixin sp-layout {
-  @media screen and (max-width: 750px) {
-    @content;
-  }
-}
-
 		
 </style>

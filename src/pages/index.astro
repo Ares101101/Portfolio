@@ -15,20 +15,22 @@ import Proyects from '../components/Proyects.astro';
 
 <Layout 
 title="Portfolio de Diego Felix Amachi Flores - Desarrollador y Programador Web"
-description="Apasionado por la innovación digital, Especializado en crear experiencias de usuario impactantes con. Comprometido con la excelencia en el desarrollo web y la implementación de soluciones tecnológicas de vanguardia. ¡Conéctemos para explorar oportunidades emocionantes!"
+description="Desarrollador de software con más de un año de experiencia en el desarrollo web y dos años de experiencia como auxiliar contable. Me especializo en lenguajes de desarrollo web como JavaScript, HTML, CSS, y MySQL, así como en sus distintas bibliotecas y frameworks."
 >
 	<main class="px-4 w-full " 
 	data-section="top">
-		<SectionContainer class=" py-44 " id="Sobre-mí">
-			<h1 class=" text-white text-3xl sm:text-5xl font-bold flex  flex-row pb-8 gap-x-4">Hola,👋 soy Diego Amachi 	
+		<SectionContainer class=" h-[calc(100vh-64px)]" id="Sobre-mí">
+			<h1	class=" text-white text-md sm:text-xl font-bold pb-8 gap-x-4 items-center w-full flex flex-col">
+				Hola👋, yo soy
 				<a 
-				href="https://www.linkedin.com/in/diego-amachi-flores-b1b724217/"
-				target="_blank"
-				rel="noopener"
-				class="flex justify-center items-center"
-				>
-					<Badge> Disponible para trabajar</Badge>
-				</a>
+					href="https://www.linkedin.com/in/diego-amachi-flores-b1b724217/"
+					target="_blank"
+					rel="noopener"
+					class=" cursor-pointer "
+				>			
+					Diego Felix Amachi Flores
+				</a> 	
+				
 			</h1>
 			<h2 class=" sm:text-3xl text-xl	 opacity-80 text-wrap  ">
 				<span class=" text-yellow-200/90"> +1 año de expericencia </span> como desarrollador de software, 
@@ -53,7 +55,7 @@ description="Apasionado por la innovación digital, Especializado en crear exper
 			</nav>
 		</SectionContainer>
 
-		<SectionContainer id="Experiencia">
+		<SectionContainer id="Experiencia" class=" h-screen">
 			<h2 class=" text-2xl font-semibold mb-6 flex gap-x-3 items-center dark:text-blue-300 text-blue-800">
 				<ExperiencieIcon class="size-7 "/>
 				Experiencia Laboral
@@ -61,14 +63,19 @@ description="Apasionado por la innovación digital, Especializado en crear exper
 			<Experience/>
 		</SectionContainer>
 
-		<SectionContainer id='Proyectos'>
+		<SectionContainer id='Proyectos'  class="h-screen overflow-hidden"	>
 			<h2 class=" text-2xl font-semibold mb-6 flex gap-x-3 items-center dark:text-blue-300 text-blue-800">
 				<ProyecIcon class="size-7 "/>
 				Proyectos
 			</h2>
 			<Proyects/>
 		</SectionContainer>
+		<SectionContainer   class="h-screen overflow-hidden">
 
+		</SectionContainer>
+		<SectionContainer   class="h-screen overflow-hidden">
+
+		</SectionContainer>	
 	</main>		
 </Layout>
 
