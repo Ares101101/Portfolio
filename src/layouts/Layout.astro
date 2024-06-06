@@ -3,6 +3,7 @@ import '@fontsource-variable/onest';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/stars.css'
+import '@fontsource-variable/pixelify-sans';
 interface Props {
 	title: string;
 	description: string;
@@ -41,17 +42,25 @@ const { description, title } = Astro.props;
 		</section>
 		<Header/>
 		<slot/> 
-		<Footer/>	
+		<Footer/>
+		
 	</body>
 </html>
 <style is:global>
+	@font-face {
+		font-family: Pixeled;
+		src: url('/fonts/Pixeled.woff2') format('woff2');				
+	}
+	
 	:root {
 		color-scheme: light dark;
 	}
+
 	html {
-		font-family: "Onest Variable", system-ui, sans-serif;
 		padding: 0;
 		margin: 0;
+		color: #ffffff;
   	}
-		
+
+	
 </style>

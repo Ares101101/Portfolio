@@ -178,3 +178,36 @@ body{
         opacity: 0;
     }
 }
+.title1{
+    color: #FCEC3C;
+    text-shadow: 2px 1px #E47316;
+}
+.shadow{
+   color: #00a8e8;
+    text-shadow: 2px 1px #33415c; 
+}
+.title{
+    color: transparent;
+    background: linear-gradient(90deg, #0062a3,#722399,#992329);
+    background-clip: text;
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    animation: animatetitle 5s linear infinite;
+}
+@keyframes animatetitle {
+    0% {
+        background-position: 0% ;
+    }
+    50%{
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+/*0 0 0 0.6vh rgba(255,255,255,0.1),0 0 0 0.4vh rgba(255,255,255,0.1),0 0 0.8vh rgba(255,255,255,0.1);*/
+.nav{
+    color: #fff;
+    text-shadow: 2px 2px rgba(255, 255, 255, 0.25);
+    
+}
