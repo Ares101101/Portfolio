@@ -4,12 +4,14 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/stars.css'
 import '@fontsource-variable/pixelify-sans';
+import type { any, number } from 'astro/zod';
 interface Props {
 	title: string;
 	description: string;
 }
 
 const { description, title } = Astro.props;
+
 ---
 
 <!doctype html>
@@ -35,10 +37,7 @@ const { description, title } = Astro.props;
             <span class="spanstart"></span>
             <span class="spanstart"></span>
         </section>
-		<section class="secti2 z-[-1]">
-			<div id="stars"></div>
-			<div id="stars2"></div>
-			<div id="stars3"></div>
+		<section class="secti2">
 		</section>
 		<Header/>
 		<slot/> 
@@ -61,6 +60,32 @@ const { description, title } = Astro.props;
 		margin: 0;
 		color: #ffffff;
   	}
-
-	
 </style>
+<script>
+	const newStarts = []
+	const createNumStars = (num:number)=>{
+		if (num >0){
+			for (let index = 0; index <= num; index++) {
+				newStarts.push(index)
+			}
+		}else{
+			return false
+		}
+	}
+	const createStarts = (num:number) =>{
+		createNumStars(num)
+		newStarts.forEach(()=>{	
+			let div = document.createElement('div')
+			div.style.right = `${Math.random()*100}%`
+			div.className = `stars${Math.floor(Math.random()*3)}`
+			const box = document.querySelector('.secti2')
+			box?.appendChild(div)
+			 // Calculate the negative animation delay based on 80% of the duration
+			const animationDuration = parseFloat(getComputedStyle(div).animationDuration);
+			const animationDelay = -Math.random() * animationDuration;
+			div.style.animationDelay = `${animationDelay}s`;
+		})
+	}
+	createStarts(200)
+</script>
+

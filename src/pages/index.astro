@@ -1,71 +1,74 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro'
-import LinkedIcon from '../components/icons/LinkedIcon.astro'
-import SocialPill from '../components/SocialPill.astro';
-import GitHubIcon from '../components/icons/GitHub.astro'
-import MailIcon from '../components/icons/Mail.astro'
-import Experience from '../components/Experience.astro';
-import SectionContainer from '../components/SectionContainer.astro';
-import ExperiencieIcon from '../components/icons/ExperiencieIcon.astro';
-import ProyecIcon from '../components/icons/ProyecIcon.astro';
-import Proyects from '../components/Proyects.astro';
-
-
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedIcon from "../components/icons/LinkedIcon.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import ExperiencieIcon from "../components/icons/ExperiencieIcon.astro";
+import ProyecIcon from "../components/icons/ProyecIcon.astro";
+import Proyects from "../components/Proyects.astro";
 ---
 
-<Layout 
-title="Portfolio de Diego Felix Amachi Flores - Desarrollador y Programador Web"
-description="Desarrollador de software con más de un año de experiencia en el desarrollo web y dos años de experiencia como auxiliar contable. Me especializo en lenguajes de desarrollo web como JavaScript, HTML, CSS, y MySQL, así como en sus distintas bibliotecas y frameworks."
+<Layout
+  title="Portfolio de Diego Felix Amachi Flores - Desarrollador y Programador Web"
+  description="Desarrollador de software con más de un año de experiencia en el desarrollo web y dos años de experiencia como auxiliar contable. Me especializo en lenguajes de desarrollo web como JavaScript, HTML, CSS, y MySQL, así como en sus distintas bibliotecas y frameworks."
 >
-	<main class="px-4 w-full " 
-	data-section="top">
-		<SectionContainer class=" h-[calc(100vh-64px)] font-title" id="Sobre-mí">
-			<span	class=" items-center w-full flex flex-col relative">
-				<span class=" title1">Hola<img src="/hi.png" alt="saludo" class=" w-8 inline-block mb-2 ml-2 font-body ">, yo soy</span>
-				<h1 class=" text-center py-12">
-					<a 
-						href="https://www.linkedin.com/in/diego-amachi-flores-b1b724217/"
-						target="_blank"
-						rel="noopener"
-						class=" text-center cursor-pointer  text-6xl  xl:text-7xl font-extrabol title gap-12"
-						
-					>			
-						DIEGO FELIX AMACHI FLORES
-				</a> 				
-				</h1>
-				<h2 class=" title1 font-body text-3xl ">				
-					Desarrollador <strong class=" shadow">web</strong> junior, Especializado en el desarrollo frontend
-				</h2>
-			</span>	
-		</SectionContainer>
+  <main class="px-4 w-full" data-section="top">
+    <SectionContainer class="h-[calc(100vh-64px)] font-title" id="Sobre-mí">
+      <span class="items-center w-full flex flex-col relative">
+        <span class="title1"
+          >Hola<img
+            src="/hi.png"
+            alt="saludo"
+            class="w-8 inline-block mb-2 ml-2 font-body"
+          />, yo soy</span
+        >
+        <h1 class="text-center py-12">
+          <a
+            href="https://www.linkedin.com/in/diego-amachi-flores-b1b724217/"
+            target="_blank"
+            rel="noopener"
+            class="text-center cursor-pointer text-6xl xl:text-7xl font-extrabol title gap-12"
+          >
+            DIEGO FELIX AMACHI FLORES
+          </a>
+        </h1>
+        <h2 class="title1 font-body text-3xl">
+          Desarrollador <strong class="shadow">web</strong>, Especializado en el
+          desarrollo frontend
+        </h2>
+      </span>
+    </SectionContainer>
 
-		<SectionContainer id="Experiencia" class=" h-screen">
-			<h2 class=" text-2xl font-semibold mb-6 flex gap-x-3 items-center dark:text-blue-300 text-blue-800">
-				<ExperiencieIcon class="size-7 "/>
-				Experiencia Laboral
-			</h2>
-			<Experience/>
-		</SectionContainer>
+    <SectionContainer id="Experiencia" class="h-screen">
+      <h2
+        class="text-2xl font-title mb-6 flex gap-x-3 items-center dark:text-blue-300 text-blue-800 shadow "
+      >
+        <ExperiencieIcon class="size-14" />
+        Experiencia Laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
 
-		<SectionContainer id='Proyectos'  class="h-screen overflow-hidden"	>
-			<h2 class=" text-2xl font-semibold mb-6 flex gap-x-3 items-center dark:text-blue-300 text-blue-800">
-				<ProyecIcon class="size-7 "/>
-				Proyectos
-			</h2>
-			<Proyects/>
-		</SectionContainer>
-		<SectionContainer   class="h-screen overflow-hidden">
-
-		</SectionContainer>
-		<SectionContainer   class="h-screen overflow-hidden">
-
-		</SectionContainer>	
-	</main>		
+    <SectionContainer id="Proyectos" class="h-screen overflow-hidden">
+      <h2
+        class="text-2xl font-semibold mb-6 flex gap-x-3 items-center dark:text-blue-300 text-blue-800"
+      >
+        <ProyecIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Proyects />
+    </SectionContainer>
+    <SectionContainer class="h-screen overflow-hidden" />
+    <SectionContainer class="h-screen overflow-hidden" />
+  </main>
 </Layout>
 
-
-{/*
+{
+  /*
   w-full  font-extrabol title 
 <h2 class=" sm:text-3xl text-xl	 opacity-80 text-wrap  ">
 				<span class=" text-yellow-200/90"> +1 año de expericencia </span> como desarrollador de software, 
@@ -87,4 +90,5 @@ description="Desarrollador de software con más de un año de experiencia en el 
 					<MailIcon class="size-6"/>
 					Diego.amachiflores@gmail.com
 				</SocialPill>
-			</nav> */}
+			</nav> */
+}
