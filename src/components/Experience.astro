@@ -1,37 +1,37 @@
 ---
-import ExperiencieItem from "./ExperiencieItem.astro"
-
+import ExperiencieItem from "./ExperiencieItem.astro";
 
 const EXPERIENCIE = [
-    {
-        title : 'Desarrollador de Software- CSI Servicios Integrales',
-        date : 'Enero, 2024',
-        actual :'Abril 2024',
-        description : "Tuve la responsabilidad de desarrollar programas para la mejora de la productividad en la empresa, cuando llegue la empresa, digitaban a mano las boletas y facturas de sus proveedores en su sistema contable, desarrolle una aplicación compatible con el diseño de importación de comprobantes de su programa contable.",
-       
-    }, 
-    {
-        title : 'Desarrollador Web - RVC Servicios Contables',
-        date : 'Julio, 2023',
-        description : "Encabecé el proceso de desarrollo y despliegue a producción de la página web para la empresa RVC Servicios Contables S.A en donde implementé un diseño moderno y responsive que refleja la profesionalidad y valores de la empresa, garantizando una experiencia intuitiva al usuario.",
-        link : 'https://rvc.vercel.app/'
-    },
-    {   
-        title : 'Desarrollo de Software - RVC Servicios Contables',
-        date : 'Enero, 2023',
-        description :'Lideré el diseño y desarrollo de programas de software destinados a la automatización de procesos administrativos y contables en RVC Servicios Contables S.A. implementando soluciones que optimizaron la eficiencia operativa y redujeron la carga manual en tareas administrativas y contables.',
-        link : 'https://github.com/Ares101101/Contab'    
-    }
-    
-]
+  {
+    title: "Desarrollador de Software- CSI Servicios Integrales",
+    date: "Enero, 2024",
+    actual: "Abril 2024",
+    description:
+      "Tuve la responsabilidad de desarrollar programas para la mejora de la productividad en la empresa, cuando llegue la empresa, digitaban a mano las boletas y facturas de sus proveedores en su sistema contable, desarrolle una aplicación compatible con el diseño de importación de comprobantes de su programa contable.",
+  },
+  {
+    title: "Desarrollador Web - RVC Servicios Contables",
+    date: "Julio, 2023",
+    description:
+      "Encabecé el proceso de desarrollo y despliegue a producción de la página web para la empresa RVC Servicios Contables S.A en donde implementé un diseño moderno y responsive que refleja la profesionalidad y valores de la empresa, garantizando una experiencia intuitiva al usuario.",
+    link: "https://rvc.vercel.app/",
+  },
+  {
+    title: "Desarrollo de Software - RVC Servicios Contables",
+    date: "Enero, 2023",
+    description:
+      "Lideré el diseño y desarrollo de programas de software destinados a la automatización de procesos administrativos y contables en RVC Servicios Contables S.A. implementando soluciones que optimizaron la eficiencia operativa y redujeron la carga manual en tareas administrativas y contables.",
+    link: "https://github.com/Ares101101/Contab",
+  },
+];
 ---
-<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3"> 
-    {
-        EXPERIENCIE.map( experiencie => (
-         <li class="mb-10 ms-6">
-            <ExperiencieItem {...experiencie}/>  
-         </li>   
-        ))
-    }                   
-</ol>
 
+<ol class="relative">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ">
+        <ExperiencieItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

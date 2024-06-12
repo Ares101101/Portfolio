@@ -1,91 +1,48 @@
 ---
-import '@fontsource-variable/onest';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/stars.css'
-import '@fontsource-variable/pixelify-sans';
-import type { any, number } from 'astro/zod';
+import "../styles/stars.css";
+import "@fontsource-variable/onest";
+import "@fontsource-variable/pixelify-sans";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Background from "../components/Background.astro";
+
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
-
 const { description, title } = Astro.props;
-
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/daf.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body >
-		<section class="secti overflow-hidden z-[-1]">
-            <span class="spanstart"></span>
-            <span class="spanstart"></span>
-            <span class="spanstart"></span>
-            <span class="spanstart"></span>
-            <span class="spanstart"></span>
-            <span class="spanstart"></span>
-            <span class="spanstart"></span>
-            <span class="spanstart"></span>
-            <span class="spanstart"></span>
-            <span class="spanstart"></span>
-        </section>
-		<section class="secti2">
-		</section>
-		<Header/>
-		<slot/> 
-		<Footer/>
-		
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/daf.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Background />
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 </html>
 <style is:global>
-	@font-face {
-		font-family: Pixeled;
-		src: url('/fonts/Pixeled.woff2') format('woff2');				
-	}
-	
-	:root {
-		color-scheme: light dark;
-	}
+  @font-face {
+    font-family: Pixeled;
+    src: url("/fonts/Pixeled.woff2") format("woff2");
+  }
 
-	html {
-		padding: 0;
-		margin: 0;
-		color: #ffffff;
-  	}
+  :root {
+    color-scheme: light dark;
+  }
+
+  html {
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+  }
 </style>
-<script>
-	const newStarts = []
-	const createNumStars = (num:number)=>{
-		if (num >0){
-			for (let index = 0; index <= num; index++) {
-				newStarts.push(index)
-			}
-		}else{
-			return false
-		}
-	}
-	const createStarts = (num:number) =>{
-		createNumStars(num)
-		newStarts.forEach(()=>{	
-			let div = document.createElement('div')
-			div.style.right = `${Math.random()*100}%`
-			div.className = `stars${Math.floor(Math.random()*3)}`
-			const box = document.querySelector('.secti2')
-			box?.appendChild(div)
-			 // Calculate the negative animation delay based on 80% of the duration
-			const animationDuration = parseFloat(getComputedStyle(div).animationDuration);
-			const animationDelay = -Math.random() * animationDuration;
-			div.style.animationDelay = `${animationDelay}s`;
-		})
-	}
-	createStarts(200)
-</script>
-

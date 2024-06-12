@@ -219,5 +219,20 @@ body{
 }
 .iconCalendar{
     color: #fff;
-    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1),0 0 0 16px rgba(255,255,255,0.1),0 0 20px rgba(255,255,255,0.1); 
+    box-shadow: 0 0 0 16px rgba(255, 255, 255, 0.1),0 0 0 8px rgba(255,255,255,0.1),0 0 20px rgba(255,255,255,0.1); 
+}
+.fecha{
+    font-style: italic;
+    letter-spacing: 4px;
+    font-size: 0.60rem;
+    line-height: 0.8rem
+}
+
+.classtitle{
+    margin-bottom: 20px;
+    font-size: 0.80rem/* 12px */;
+    line-height: 1rem/* 16px */;
+    letter-spacing: 2px;
+    font-weight: 600;
+
 }

@@ -1,0 +1,56 @@
+---
+
+---
+
+<section class="secti overflow-hidden z-[-1]">
+  <span class="spanstart"></span>
+  <span class="spanstart"></span>
+  <span class="spanstart"></span>
+  <span class="spanstart"></span>
+  <span class="spanstart"></span>
+  <span class="spanstart"></span>
+  <span class="spanstart"></span>
+  <span class="spanstart"></span>
+  <span class="spanstart"></span>
+  <span class="spanstart"></span>
+</section>
+<section class="secti2"></section>
+<script>
+  const newStarts: (null | number)[] = [];
+
+  //funcion para añadir starts al array
+
+  const createNumStars = (num: number) => {
+    if (num > 0) {
+      for (let index = 0; index <= num; index++) {
+        newStarts.push(index);
+      }
+    } else {
+      return false;
+    }
+  };
+
+  //funcion que crea starts segun el argumento
+
+  const createStarts = (num: number) => {
+    createNumStars(num);
+    newStarts.forEach(() => {
+      //crea un elemento div con la clase starts y le agrega una posicion random en x
+
+      let div = document.createElement("div");
+      div.style.right = `${Math.random() * 100}%`;
+      div.className = `stars${Math.floor(Math.random() * 3)}`;
+      const box = document.querySelector(".secti2");
+      box?.appendChild(div);
+
+      //agarra a la estrella y le agrega en un tiempo de animacion random negativo
+
+      const animationDuration = parseFloat(
+        getComputedStyle(div).animationDuration
+      );
+      const animationDelay = -Math.random() * animationDuration;
+      div.style.animationDelay = `${animationDelay}s`;
+    });
+  };
+  createStarts(200);
+</script>

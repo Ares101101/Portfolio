@@ -1,14 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import LinkedIcon from "../components/icons/LinkedIcon.astro";
-import SocialPill from "../components/SocialPill.astro";
-import GitHubIcon from "../components/icons/GitHub.astro";
-import MailIcon from "../components/icons/Mail.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
-import ExperiencieIcon from "../components/icons/ExperiencieIcon.astro";
-import ProyecIcon from "../components/icons/ProyecIcon.astro";
+import ExperiencieIcon from "../icons/ExperiencieIcon.astro";
+import ProyecIcon from "../icons/ProyecIcon.astro";
 import Proyects from "../components/Proyects.astro";
 ---
 
@@ -45,9 +40,11 @@ import Proyects from "../components/Proyects.astro";
 
     <SectionContainer id="Experiencia" class="h-screen">
       <h2
-        class="text-2xl font-title mb-6  dark:text-blue-300 text-blue-800 shadow inline-block align-middle"
+        class="text-2xl font-title mb-6 dark:text-blue-300 text-blue-800 shadow inline-block align-middle"
       >
-        <ExperiencieIcon class="w-16 inline-block mr-2 " /><span class=" align-middle">Experiencia Laboral</span> 
+        <ExperiencieIcon class="w-16 inline-block mr-2" /><span
+          class="align-middle">Experiencia Laboral</span
+        >
       </h2>
       <Experience />
     </SectionContainer>
