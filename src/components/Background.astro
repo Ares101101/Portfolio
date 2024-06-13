@@ -4,17 +4,16 @@
 
 <section class="secti overflow-hidden z-[-1]">
   <span class="spanstart"></span>
-  <span class="spanstart"></span>
-  <span class="spanstart"></span>
-  <span class="spanstart"></span>
-  <span class="spanstart"></span>
-  <span class="spanstart"></span>
-  <span class="spanstart"></span>
-  <span class="spanstart"></span>
-  <span class="spanstart"></span>
-  <span class="spanstart"></span>
+
 </section>
-<section class="secti2"></section>
+<section class="secti2"> 
+  <div class="planet" />
+  <div class="galaxy" /> 
+  
+</section>
+<div class="tree">
+
+</div>
 <script>
   const newStarts: (null | number)[] = [];
 
@@ -51,6 +50,7 @@
       const animationDelay = -Math.random() * animationDuration;
       div.style.animationDelay = `${animationDelay}s`;
     });
+
   };
   createStarts(200);
 </script>

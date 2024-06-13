@@ -5,7 +5,7 @@ body{
     margin: 0;
     display: flex;
     flex-direction: column;
-
+    position: relative;
 }
 .secti{
     position: absolute;
@@ -133,7 +133,7 @@ body{
 .secti2{
     position: absolute;
     width: 100%;
-    height: 200%;
+    height: 100%;
     background-size: cover;
     animation: animateBg 50s linear infinite;  
     overflow: hidden;
@@ -143,25 +143,56 @@ body{
     position: absolute;
     top:0   ;
     left:initial;
-    width: 4px;
-    height: 4px;
+    width: 0.4vh;
+    height: 0.4vh;
     background: #fff;   
     animation: 5s linear infinite running animStar;
     z-index: -10;
 }
+.planet{
+    position: absolute;
+    top: 120vh   ;
+    right: -18vw;
+    width: 35vw;
+    height: 35vw;
+    background-repeat: no-repeat; 
+    z-index: -10;
+    background-image: url('/2618197944.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 15%;
+    rotate: 0deg;
+}
+.galaxy{
+    position: absolute;
+    top:-16vw;
+    left: -16vw;
+    width: 50vw;
+    height:  50vw;
+    background-repeat: no-repeat; 
+    z-index: -20;
+    background-image: url('2040072113(1).png');
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    opacity: 35%;
+    rotate: 90deg;
+}
 .stars0{
-    box-shadow: 0 0 0 6px rgba(255,255,255,0.1),0 0 0 4px rgba(255,255,255,0.1),0 0 20px rgba(255,255,255,0.1);
+    box-shadow: 0 0 0 0.6vh rgba(255,255,255,0.1),0 0 0 0.4vh rgba(255,255,255,0.1),0 0 1.2vh rgba(255,255,255,0.1);
     animation-duration: 150s;
     scale: 1;
 }
 .stars1{
-    box-shadow: 0 0 0 4px rgba(255,255,255,0.1),0 0 0 2px rgba(255,255,255,0.1),0 0 1px rgba(255,255,255,0.1); 
+    box-shadow: 0 0 0 0.4vh rgba(255,255,255,0.1),0 0 0 0.2vh rgba(255,255,255,0.1),0 0 1.2vh rgba(255,255,255,0.1); 
     animation-duration: 300s;
     scale: 0.8;
     opacity: 0.2;
 }
 .stars2 {
-    box-shadow: 0 0 0 5px rgba(255,255,255,0.1),0 0 0 3px rgba(255,255,255,0.1),0 0 20px rgba(255,255,255,0.1); 
+    box-shadow: 0 0 0 0.5vh rgba(255,255,255,0.1),0 0 0 0.3vh rgba(255,255,255,0.1),0 0 1.2vh rgba(255,255,255,0.1); 
     animation-duration: 200s;
     scale: 0.9;
     opacity: 0.9;
@@ -179,7 +210,7 @@ body{
         opacity: 1;
     }
     100% {
-        transform:  translateY(200vh);
+        transform:  translateY(400vh);
         opacity: 0;
     }
 }
@@ -235,4 +266,16 @@ body{
     letter-spacing: 2px;
     font-weight: 600;
 
+}
+.tree{
+    position: absolute;
+    background-image: url('tree.png');
+    bottom: 0;
+    width: 50vw;
+    height: 50vw;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    right: 0;
+    
 }

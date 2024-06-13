@@ -5,7 +5,7 @@ export default {
     extend: {},
     fontFamily: {
       title: ['Pixeled'],
-      body: ['Pixelify Sans Variable']
+      body: ['minecraftia']
     }
   },
   plugins: []

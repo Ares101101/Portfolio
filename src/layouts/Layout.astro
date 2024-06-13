@@ -1,7 +1,5 @@
 ---
 import "../styles/stars.css";
-import "@fontsource-variable/onest";
-import "@fontsource-variable/pixelify-sans";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Background from "../components/Background.astro";
@@ -34,6 +32,10 @@ const { description, title } = Astro.props;
   @font-face {
     font-family: Pixeled;
     src: url("/fonts/Pixeled.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: minecraftia;
+    src: url("/fonts/Minecraftia-Regular.woff2") format("woff2");
   }
 
   :root {
