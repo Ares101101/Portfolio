@@ -222,8 +222,17 @@ body{
     color: #00a8e8;
     text-shadow: 2px 1px #33415c;
 }
-
+.titlet{
+    perspective: calc(min(14.4vw, 16vh)* .75);
+    -webkit-perspective: calc(min(14.4vw, 16vh)* .75);
+}
 .title{
+    transform-origin: 100% 100%;
+    text-decoration: none;
+    display: block;
+    transform: rotateX(5deg);
+    line-height :108px;
+    font-size:154px;
     color: transparent;
     background: linear-gradient(90deg, #0062a3,#722399,#992329);
     background-clip: text;
@@ -245,8 +254,7 @@ body{
 /*0 0 0 0.6vh rgba(255,255,255,0.1),0 0 0 0.4vh rgba(255,255,255,0.1),0 0 0.8vh rgba(255,255,255,0.1);*/
 .nav{
     color: #fff;
-    text-shadow: 2px 2px rgba(255, 255, 255, 0.25);
-    
+    font-size:  27px;
 }
 .iconCalendar{
     color: #fff;
@@ -254,17 +262,11 @@ body{
 }
 .fecha{
     font-style: italic;
-    letter-spacing: 4px;
-    font-size: 0.60rem;
-    line-height: 0.8rem
+
 }
 
 .classtitle{
     margin-bottom: 20px;
-    font-size: 0.80rem/* 12px */;
-    line-height: 1rem/* 16px */;
-    letter-spacing: 2px;
-    font-weight: 600;
 
 }
 .tree{
@@ -279,3 +281,5 @@ body{
     right: 0;
     
 }
+
+
