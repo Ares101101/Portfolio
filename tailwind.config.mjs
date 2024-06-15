@@ -5,7 +5,8 @@ export default {
     extend: {},
     fontFamily: {
       title: ['Pixeled'],
-      body: ['minecraftia']
+      body: ['minecraftia'],
+      mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
     }
   },
   plugins: []

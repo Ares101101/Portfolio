@@ -5,6 +5,10 @@ import SectionContainer from "../components/SectionContainer.astro";
 import ExperiencieIcon from "../icons/ExperiencieIcon.astro";
 import ProyecIcon from "../icons/ProyecIcon.astro";
 import Proyects from "../components/Proyects.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedIcon from "../icons/LinkedIcon.astro";
+import GitHubIcon from "../icons/GitHub.astro";
+import MailIcon from "../icons/Mail.astro"
 ---
 
 <Layout
@@ -12,9 +16,9 @@ import Proyects from "../components/Proyects.astro";
   description="Desarrollador de software con más de un año de experiencia en el desarrollo web y dos años de experiencia como auxiliar contable. Me especializo en lenguajes de desarrollo web como JavaScript, HTML, CSS, y MySQL, así como en sus distintas bibliotecas y frameworks."
 >
   <main class="px-4 w-full" data-section="top">
-    <SectionContainer class="h-[calc(100vh-64px)] font-title" id="Sobre-mí">
+    <SectionContainer class="h-[calc(100vh-64px)] font-title flex flex-col items-center justify-center mx-auto" id="Sobre-mí">
       <span class="items-center w-full flex flex-col relative">
-        <div class="titlet" >
+        <h1 class="titlet" >
 
           <a
             href="#"
@@ -24,18 +28,29 @@ import Proyects from "../components/Proyects.astro";
           >
             DIEGO AMACHI F. 
           </a>
-        </div>
+        </h1>
         <h2 class=" font-title text-7xl ">
          -Desarrollador <strong class=" text-blue-600">Web</strong>-
         </h2>
+        <nav class="flex gap-x-1 mt-8  flex-1 w-full max-w-3xl bg-transparent p-1">
+          <SocialPill href="https://www.linkedin.com/in/diego-amachi-flores-b1b724217/">
+            LinkedIn
+          </SocialPill>
+          <SocialPill href="https://github.com/Ares101101">          
+            GitHub
+          </SocialPill>
+          <SocialPill href="mailto:diego.amachiflores@gmail.com">
+            Correo  
+          </SocialPill>
+        </nav> 
       </span>
     </SectionContainer>
-    <SectionContainer id="Experiencia" class="h-screen">
+    <SectionContainer id="Experiencia" class=" h-screen flex flex-col justify-center">
       <h2
-        class="text-2xl font-title shadow w-full mb-5"
+        class="text-6xl font-title w-full mb-8 border-dashed border-b-4"
       >
-        <ExperiencieIcon class="w-16 inline-block mr-2" /><span
-          class="align-middle">Experiencia Laboral</span
+        <ExperiencieIcon class="w-12 inline-block mr-4" /><span
+          class="align-middle ">Experiencia Laboral</span
         >
       </h2>
       <Experience />

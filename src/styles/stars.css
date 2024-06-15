@@ -240,6 +240,10 @@ body{
     -webkit-background-clip: text;
     animation:  5s linear infinite running animatetitle;
 }
+
+.xp{
+    line-height :108px;
+}
 @keyframes animatetitle {
     0% {
         background-position: 0% ;
@@ -265,10 +269,6 @@ body{
 
 }
 
-.classtitle{
-    margin-bottom: 20px;
-
-}
 .tree{
     position: absolute;
     background-image: url('tree.png');
