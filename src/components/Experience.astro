@@ -3,7 +3,8 @@ import ExperiencieItem from "./ExperiencieItem.astro";
 
 const EXPERIENCIE = [
   {
-    title: "Desarrollador de software - Contab2 ",
+    title: "Desarrollador de software",
+    company: "Contab2 ",
     date: "Marzo, 2024 ",
     actual: "Actualmente ",
     description:
@@ -11,34 +12,38 @@ const EXPERIENCIE = [
       link:"https://github.com/Ares101101/Contab2.git",
   },
   {
-    title: "Desarrollador de Software - CSI Servicios Integrales",
+    title: "Desarrollador de Software",
+    company: "CSI Servicios Integrales",
     date: "Diciembre, 2023 ",
     description:
       "Tuve la responsabilidad de desarrollar programas para la mejora de la productividad en la empresa. Cuando llegué, la empresa digitaba a mano las boletas y facturas de sus proveedores en su sistema contable, además de generar manualmente sus memorandos y la boleta de planilla de sus clientes. Desarrollé un sistema MVC para la generación de boletas de planillas y memorandos, además de una aplicación .exe para la importación masiva de sus comprobantes.",
   },
   {
-    title: "Desarrollador Web - RVC Servicios Contables SA",
+    title: "Desarrollador Web",
+    company: "RVC Servicios Contables SA",
     date: "Julio, 2023",
     description:
       "Desarrolle la página web de la empresa RVC Servicios contables usando Vite como copilador de código, en este proyecto use además la biblioteca de React, el framework de CSS Tailwind y la librería de React router dom, todo esto para tener un diseño acorde con los requisitos de la empresa.",
     link: "https://rvc.vercel.app/",
   },
   {
-    title: "Desarrollo de Software - RVC Servicios Contables",
+    title: "Desarrollo de Software ",
+    company: "RVC Servicios Contables SA",
     date: "Enero, 2023",
     description:
       "Lideré el diseño y desarrollo de programas de software destinados a la automatización de procesos administrativos y contables en RVC Servicios Contables S.A. implementando soluciones que optimizaron la eficiencia operativa y redujeron la carga manual en tareas administrativas y contables.",
     link: "https://github.com/Ares101101/Contab",
   },
 ];
+const on  = [ true, false, false, false]
 ---
 
-<ol class="relative">
+<ol class="relative bg-[#3E5155] p-4">
   {
-    EXPERIENCIE.map((experiencie) => (
-      <li class="mb-5 ">
+    EXPERIENCIE.map((experiencie, i) => (
+      on[i]?<li class="" id={`${i}`} >
         <ExperiencieItem {...experiencie} />
-      </li>
+      </li>:""
     ))
   }
 </ol>

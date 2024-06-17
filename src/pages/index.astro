@@ -15,9 +15,9 @@ import MailIcon from "../icons/Mail.astro"
   title="Portfolio de Diego Felix Amachi Flores - Desarrollador y Programador Web"
   description="Desarrollador de software con más de un año de experiencia en el desarrollo web y dos años de experiencia como auxiliar contable. Me especializo en lenguajes de desarrollo web como JavaScript, HTML, CSS, y MySQL, así como en sus distintas bibliotecas y frameworks."
 >
-  <main class="px-4 w-full" data-section="top">
+  <main class="px-4 w-full flex flex-col" data-section="top">
     <SectionContainer class="h-[calc(100vh-64px)] font-title flex flex-col items-center justify-center mx-auto" id="Sobre-mí">
-      <span class="items-center w-full flex flex-col relative">
+      <span class="items-center w-full flex flex-col relative lg:w-[1080px]">
         <h1 class="titlet" >
 
           <a
@@ -45,23 +45,38 @@ import MailIcon from "../icons/Mail.astro"
         </nav> 
       </span>
     </SectionContainer>
-    <SectionContainer id="Experiencia" class=" h-screen flex flex-col justify-center">
+    <SectionContainer id="Experiencia" class=" h-screen  flex flex-col justify-center xl:w-[1066px]">
+      <article class=" h-full bg-transparent flex flex-col items-start justify-center text-[#BFE4E6]">      
+         
+          <h2
+            class="text-4xl font-title  flex justify-center items-center gap-2 bg-[#222825] pb-3"
+          >
+            <div class=" p-2 bg-[#3E5155] flex justify-center items-center toplshadow relative leftthadow">
+              <ExperiencieIcon class=" min-w-12 w-12 " />
+            </div>
+            <div class=" w-4 bg-[#3E5155] h-full topshadow relative">
+
+            </div>
+              <strong class="bg-[#3E5155] h-full flex px-4 justify-center items-center toprshadow relative righthadow">EXPERIENCIA</strong>
+          </h2>
+      
+          <article class=" bg-[#222825] rightbhadow relative tlshadow flex gap-3">
+            <div class=" min-w-28 bg-[#3E5155]">
+
+            </div>
+            <Experience />
+          </article>
+      </article>
+    </SectionContainer>
+
+    <SectionContainer id="Proyectos" class="h-screen overflow-hidden lg:w-[1080px]">
       <h2
         class="text-6xl font-title w-full mb-8 border-dashed border-b-4"
       >
-        <ExperiencieIcon class="w-12 inline-block mr-4" /><span
-          class="align-middle ">Experiencia Laboral</span
-        >
-      </h2>
-      <Experience />
-    </SectionContainer>
-
-    <SectionContainer id="Proyectos" class="h-screen overflow-hidden">
-      <h2
-        class="text-2xl font-semibold mb-6 flex gap-x-3 items-center dark:text-blue-300 text-blue-800"
-      >
-        <ProyecIcon class="size-7" />
-        Proyectos
+        <ProyecIcon class="w-12 inline-block mr-4" />
+        <span class="align-middle ">
+          Proyectos
+        </span>
       </h2>
       <Proyects />
     </SectionContainer>
