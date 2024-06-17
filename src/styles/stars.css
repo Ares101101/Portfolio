@@ -219,8 +219,8 @@ body{
     text-shadow: 2px 1px #E47316;
 }
 .shadow{
-    color: #00a8e8;
-    text-shadow: 2px 1px #33415c;
+    content: '';
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.25)
 }
 .titlet{
     perspective: calc(min(14.4vw, 16vh)* .75);
@@ -369,3 +369,182 @@ body{
         );
     z-index: -10;
 }
+.shadowEXP::after{
+    content:'';
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+    background:  #2C3634;
+    clip-path: polygon(
+        0 100%, 
+        4px  calc(100% - 4px),
+        4px 4.5px,
+        calc(100% - 4px) 4.5px,
+        100% 0,  
+        0 0 
+        );
+    z-index: 1;
+}
+.shadowEXP::before{
+    content:'';
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+    background: #6E7D80;
+    clip-path: polygon(
+        100% 100%,
+        0 100%,
+        4px  calc(100% - 4px),
+        calc(100% - 4px) calc(100% - 4px),
+        calc(100% - 4px) 4px,
+        100% 0
+    );
+    z-index: 1;
+}
+.flecha::before{
+    content:'';
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    min-width: calc(100% + 20px);
+    min-height: calc(100% + 8px);
+    background: #bee3e5;
+    clip-path: polygon(
+        0 0, 
+        80%  0, 
+        100% 25%,
+        100% 75%,
+        80% 100%,
+        0 100%,
+        0 0,
+        4px 4px,
+        4px calc(100% - 4px),
+        calc(80% - 4px) calc(100% - 4px),
+        calc(100% - 4px) calc(75% - 4px),
+        calc(100% - 4px)  calc(25% + 4px),
+        calc(80% - 4px)   4px,
+        4px 4px
+    );
+    z-index: 2;
+}
+.flecha::after{
+    content:'';
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    min-width: calc(100% + 20px + 12px);
+    min-height: calc(100% + 8px);
+    background: #bee3e5;
+    clip-path: polygon(
+        calc(100% - 8px) 25%,
+        calc(100% - 4px) 25%,
+        calc(100% - 4px) 75%,
+        calc(100% - 8px) 75%
+        
+    );
+    z-index: 2;
+}
+.punta::before{
+    content:'';
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    min-width: calc(100% + 20px + 12px + 12px);
+    min-height: calc(100% + 8px);
+    background: #bee3e5;
+    clip-path: polygon(
+        calc(100% - 12px) 25%,
+        100% 50%,
+        calc(100% - 12px) 75%
+        
+    );
+    z-index: 1;
+}
+
+.punta::after{
+    content:'';
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    min-width: calc(100% + 20px + 12px);
+    min-height: calc(100% + 8px);
+    background: #3E5155;
+    clip-path: polygon(
+        calc(100% - 12px) calc(25% - 8px) ,
+        100% calc(25% - 8px),
+        100% calc(75% + 8px),
+        calc(100% - 12px) calc(75% + 8px)  
+    );
+    z-index: 1;
+}
+.shadowOnEXP::after{
+    content:'';
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    width: calc(100% + 20px + 12px + 20px);
+    height: calc(100% + 16px);
+    background:  #2C3634;
+    clip-path: polygon(
+        0 100%, 
+        4px  calc(100% - 4px),
+        4px 4.5px,
+        calc(80% - 24px) 4.5px,
+        calc(100% - 30px) calc(25% + 1px),
+        calc(100% - 16px) calc(25% + 1px),
+        calc(100% - 4px) 50%,
+        100% 50%,
+        calc(100% - 15px) calc(25% - 3px),
+        calc(100% - 27px) calc(25% - 3px),
+        calc(80% - 20px) 0,  
+        0 0     
+        );
+    z-index: 1;
+}
+.shadowOnEXP::before{
+    content:'';
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    width: calc(100% + 20px + 12px + 20px);
+    height: calc(100% + 16px);
+    background:  #6E7D80;
+    clip-path: polygon(
+        0 100%, 
+        4px  calc(100% - 4px),
+        calc(80% - 24px) calc(100% - 4px),
+        calc(100% - 30px) calc(75% - 2px),
+        calc(100% - 16px) calc(75% - 2px),
+        calc(100% - 4px) 50%,
+        100% 50%,
+        calc(100% - 14px) calc(75% + 2px),
+        calc(100% - 27px) calc(75% + 2px),
+        calc(80% - 20px) 100%
+        );
+    z-index: 2;
+}
+/*0 0, 
+        50%  0, 
+        62.5% 25%,
+        87.5% 25%,
+        100% 50%,
+        87.5% 75%,
+        62.5% 75%,
+        50% 100%,
+        0 100%
+        
+        4px 4.5px,
+        calc(80% - 24px) 4.5px,
+        calc(100% - 30px) calc(25% + 1px),
+        calc(100% - 16px) calc(25% + 1px),
+        calc(100% - 4px) 50%,
+        100% 50%,
+        calc(100% - 15px) calc(25% - 3px),
+        calc(100% - 27px) calc(25% - 3px),
+        calc(80% - 20px) 0,  
+        0 0     
+        */

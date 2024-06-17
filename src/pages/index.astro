@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Experience from "../components/Experience.astro";
+import {Experience} from "../components/Experience.jsx"
 import SectionContainer from "../components/SectionContainer.astro";
 import ExperiencieIcon from "../icons/ExperiencieIcon.astro";
 import ProyecIcon from "../icons/ProyecIcon.astro";
@@ -23,7 +23,7 @@ import MailIcon from "../icons/Mail.astro"
           <a
             href="#"
             target="_blank"
-            rel="noopener"
+            rel="noopener" 
             class="title text-center pb-8"
           >
             DIEGO AMACHI F. 
@@ -61,10 +61,8 @@ import MailIcon from "../icons/Mail.astro"
           </h2>
       
           <article class=" bg-[#222825] rightbhadow relative tlshadow flex gap-3">
-            <div class=" min-w-28 bg-[#3E5155]">
-
-            </div>
-            <Experience />
+            
+            <Experience  client:visible />
           </article>
       </article>
     </SectionContainer>

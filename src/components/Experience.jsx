@@ -1,5 +1,5 @@
----
-import ExperiencieItem from "./ExperiencieItem.astro";
+import { useState } from "react";
+import { ExperiencieItem } from "./ExperiencieItem.jsx";
 
 const EXPERIENCIE = [
   {
@@ -9,7 +9,7 @@ const EXPERIENCIE = [
     actual: "Actualmente ",
     description:
       "Me encuentro desarrollando un programa de facturación electrónica, estoy desarrollando este proyecto con mis experiencias anteriores los cuales fueron con lenguajes como JS, CSS, HTML, y Rust, además de mi experiencia de 2 años como auxiliar contable para poder usar la API de Sunat para la emisión de estos comprobantes. Este proyecto está siendo desarrollado con Tauri.",
-      link:"https://github.com/Ares101101/Contab2.git",
+    link: "https://github.com/Ares101101/Contab2.git",
   },
   {
     title: "Desarrollador de Software",
@@ -35,15 +35,52 @@ const EXPERIENCIE = [
     link: "https://github.com/Ares101101/Contab",
   },
 ];
-const on  = [ true, false, false, false]
----
-
-<ol class="relative bg-[#3E5155] p-4">
-  {
-    EXPERIENCIE.map((experiencie, i) => (
-      on[i]?<li class="" id={`${i}`} >
-        <ExperiencieItem {...experiencie} />
-      </li>:""
-    ))
+export const Experience = () => {
+  const [on, setOn] = useState([true, false, false, false])
+  function OnClick(i) {
+    const newOn = on.map((_, il) => il === i)
+    setOn(newOn)
+    console.log(newOn)
   }
-</ol>
+  return (
+    <section class="relative   flex gap-3">
+      <div class="min-w-28 bg-[#3E5155] flex flex-col items-center justify-between gap-8 p-4 " id=" conteiner">
+        {on.map((o, i) => (
+          o?<div
+            class=" min-w-20 min-h-20 relative shadowOnEXP  "
+            id={`${i}`}
+            onClick={() => OnClick(i)}
+          >
+            
+            <div className="flecha ">
+            </div>
+            <div className="punta">
+            </div>
+          </div>:
+          <div
+          class=" min-w-[88px] min-h-[88px] relative shadowEXP border-4 border-dashed"
+          id={`${i}`}
+          onClick={() => OnClick(i)}
+        >
+
+          </div>
+        ))}
+      </div>
+      <div class="bg-[#3E5155] p-4">
+        {
+          EXPERIENCIE.map((experiencie, i) => (
+            on[i] ? (
+              <li class=""  >
+                < ExperiencieItem
+                  {...experiencie}
+                />
+              </li>
+            ) : ""
+          ))
+        }
+      </div>
+    </section>
+  )
+}
+
+
