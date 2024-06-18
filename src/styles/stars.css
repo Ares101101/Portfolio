@@ -376,7 +376,7 @@ body{
     top: -8px;
     width: calc(100% + 16px);
     height: calc(100% + 16px);
-    background:  #2C3634;
+    background:  #6E7D80;
     clip-path: polygon(
         0 100%, 
         4px  calc(100% - 4px),
@@ -394,7 +394,7 @@ body{
     top: -8px;
     width: calc(100% + 16px);
     height: calc(100% + 16px);
-    background: #6E7D80;
+    background: #2C3634;
     clip-path: polygon(
         100% 100%,
         0 100%,
@@ -448,6 +448,9 @@ body{
     );
     z-index: 2;
 }
+.flecha{
+    
+}
 .punta::before{
     content:'';
     position: absolute;
@@ -462,7 +465,7 @@ body{
         calc(100% - 12px) 75%
         
     );
-    z-index: 1;
+    z-index: 3;
 }
 
 .punta::after{

@@ -1,24 +1,22 @@
-import CalendarIcon from "../icons/CalendarIcon.astro";
 
 export const ExperiencieItem = ({ title, date, actual, description, link, company }) => {
-
   return (
     <>
-      <h3 class="font-title text-3xl font-bol pixel-corners px-4 border-4 border-l-black/25 border-t-black/25 border-r-white/25 border-b-white/25 mb-4 bg-black/15">
+      <h3 class='font-title text-3xl font-bol pixel-corners px-4 border-4 border-l-black/25 border-t-black/25 border-r-white/25 border-b-white/25 mb-4 bg-black/15'>
         {title.toUpperCase()}
 
       </h3>
-      <div class="mb-4">
-        <span class="text-lg p-2 border-4 border-l-black/25 border-t-black/25 border-r-white/25 border-b-white/25 mb-4 bg-[#4c525f] font-title ">
+      <div class='mb-4'>
+        <span class='text-lg p-2 border-4 border-l-black/25 border-t-black/25 border-r-white/25 border-b-white/25 mb-4 bg-[#4c525f] font-title '>
           {company.toUpperCase()}
         </span>
-        <span class=" text-lg font-title italic border-4 p-2 border-l-black/25 border-t-black/25 border-r-white/25 border-b-white/25">
+        <span class=' text-lg font-title italic border-4 p-2 border-l-black/25 border-t-black/25 border-r-white/25 border-b-white/25'>
           {date}
 
         </span>
         {
           actual && (
-            <span class="text-lg p-2 border-4 border-l-black/25 border-t-black/25 border-r-white/25 border-b-white/25 bg-[#3c6485] font-title ">
+            <span class='text-lg p-2 border-4 border-l-black/25 border-t-black/25 border-r-white/25 border-b-white/25 bg-[#3c6485] font-title '>
               {actual}
             </span>
           )
@@ -26,7 +24,7 @@ export const ExperiencieItem = ({ title, date, actual, description, link, compan
 
       </div>
       <p
-        class=" text-lg font-light font-mono  not-italic border-4 border-l-black/25 border-t-black/25 border-r-white/25 border-b-white/25 mb-4 bg-[#4c525f] p-4"
+        class=' text-lg font-light font-mono  not-italic border-4 border-l-black/25 border-t-black/25 border-r-white/25 border-b-white/25 mb-4 bg-[#4c525f] p-4'
       >
         {description}
       </p>
@@ -34,9 +32,9 @@ export const ExperiencieItem = ({ title, date, actual, description, link, compan
         link && (
           <a
             href={link}
-            target="_blank"
-            rel="noopener"
-            class=" text-lg border-4 border-t-white/25 border-l-white/25 border-b-black/25  border-r-black/25 hover:border-t-black/25 hover:border-l-black/25 hover:border-r-white/25 hover:border-b-white/25 hover:bg-[#2c4b64] fb px-1 bg-[#3c6485] font-title  p-2"
+            target='_blank'
+            rel='noopener noreferrer'
+            class=' text-lg border-4 border-t-white/25 border-l-white/25 border-b-black/25  border-r-black/25 hover:border-t-black/25 hover:border-l-black/25 hover:border-r-white/25 hover:border-b-white/25 hover:bg-[#2c4b64] fb px-1 bg-[#3c6485] font-title  p-2'
           >
             Saber más...
           </a>
@@ -47,10 +45,7 @@ export const ExperiencieItem = ({ title, date, actual, description, link, compan
   )
 }
 
-
-
-{
-  /*
+/*
   <svg
     xmlns="http://www.w3.org/2000/svg"
     class="icon icon-tabler icon-tabler-square-rounded-arrow-right-filled"
@@ -71,6 +66,5 @@ export const ExperiencieItem = ({ title, date, actual, description, link, compan
         stroke-width="0"
       />
     </>
-  </svg> 
+  </svg>
   */
-}
