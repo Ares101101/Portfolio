@@ -43,35 +43,48 @@ export const Experience = () => {
     console.log(newOn)
   }
   return (
-    <section class='relative   flex gap-3'>
-      <div class='min-w-28 bg-[#3E5155] flex flex-col items-center justify-between gap-8 p-4 ' id=' conteiner'>
+    <section className='relative   flex gap-3'>
+      <div className='min-w-28 bg-[#3E5155] flex flex-col items-center justify-between gap-8 p-4 ' id=' conteiner'>
         {on.map((o, i) => (
           o
             ? <div
-                class=' min-w-20 min-h-20 relative shadowOnEXP bg-black/15'
+                class=' items-center justify-center flex  min-w-20 min-h-20 relative shadowOnEXP bg-black/15'
                 id={`${i}`}
                 onClick={() => OnClick(i)}
                 key={i}
               >
-
+                <svg 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24"
+                width="64px"
+                > <path d="M15 2h2v2h4v8h-2v-2H5v10h6v2H3V4h4V2h2v2h6V2zM9 6H5v2h14V6H9zm8 6v2h-4v-2h4zm-4 6h-2v-4h2v4zm4 0h-4v2h6v2h2v-2h-2v-6h-2v4z" fill="currentColor"/> </svg>
               <div className='flecha ' />
               <div className='punta' />
+              <div className='dar'></div>
               </div>
             : <div
-                class=' min-w-20 min-h-20 relative shadowEXP '
+                className=' min-w-[88px] min-h-[88px] relative shadowEXP border-4 border-transparent flex justify-center items-center'
                 id={`${i}`}
                 onClick={() => OnClick(i)}
                 key={i}
-              />
+              >
+                <svg 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24"
+                width="64px"
+                > <path d="M15 2h2v2h4v18H3V4h4V2h2v2h6V2zm4 6V6H5v2h14zm0 2H5v10h14V10zm-3 2v2h-2v-2h2zm-4 4v-2h2v2h-2zm-2 0h2v2h-2v-2zm0 0H8v-2h2v2z" fill="currentColor"/> </svg>
+              </div>
         ))}
       </div>
-      <div class='bg-[#3E5155] p-4'>
+      <div className='bg-[#3E5155] p-4'>
         {
           EXPERIENCIE.map((experiencie, i) => (
             on[i]
-              ? (
-                <li
-                  class=''
+                ? (
+                  <li
+                  className=''
                   key={i}
                 >
                   <ExperiencieItem

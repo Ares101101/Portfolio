@@ -45,7 +45,11 @@ import MailIcon from "../icons/Mail.astro"
         </nav> 
       </span>
     </SectionContainer>
-    <SectionContainer id="Experiencia" class=" h-screen  flex flex-col justify-center xl:w-[1066px]">
+    <SectionContainer 
+    id="Experiencia" 
+    class=" h-screen  flex flex-col justify-center xl:w-[1066px] px-3 pb-3"
+
+    >
       <article class=" h-full bg-transparent flex flex-col items-start justify-center text-[#BFE4E6]">      
          
           <h2
@@ -62,7 +66,7 @@ import MailIcon from "../icons/Mail.astro"
       
           <article class=" bg-[#222825] rightbhadow relative tlshadow flex gap-3">
             
-            <Experience  client:visible />
+          <Experience  client:visible />
           </article>
       </article>
     </SectionContainer>
