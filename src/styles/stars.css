@@ -528,6 +528,7 @@ body{
         );
     z-index: 2;
 }
+
 .dar{
     content:'';
     position: absolute;
@@ -545,24 +546,105 @@ body{
     );
     z-index: 1;
 }
-/*0 0, 
-        50%  0, 
-        62.5% 25%,
-        87.5% 25%,
-        100% 50%,
-        87.5% 75%,
-        62.5% 75%,
-        50% 100%,
-        0 100%
-        
-        4px 4.5px,
-        calc(80% - 24px) 4.5px,
-        calc(100% - 30px) calc(25% + 1px),
-        calc(100% - 16px) calc(25% + 1px),
-        calc(100% - 4px) 50%,
-        100% 50%,
-        calc(100% - 15px) calc(25% - 3px),
-        calc(100% - 27px) calc(25% - 3px),
-        calc(80% - 20px) 0,  
-        0 0     
-        */
+
+.triangle{
+    clip-path: polygon(
+        50% 0%, 0% 100%, 100% 100%
+        );
+    background-color: #3E5155;
+    position: relative; 
+    min-width: 78px;
+    min-height: 50px;
+    z-index: 10;
+}
+
+.sec:active .triangle{
+    background-color:rgba(0, 0, 0, 0.15)
+}
+
+.sec::before{
+    content:'';
+    position: absolute;
+    left: -9px;
+    top: -8px;
+    min-width: calc(100% + 18px);
+    min-height: calc(100% + 12px);
+    background: #354548;
+    clip-path: polygon(
+        0 100%,
+        9px calc(100% - 4px),
+        calc(100% - 9px) calc(100% - 4px),
+        50% 8px,
+        50% 0,
+        100% 100%
+    );
+    z-index: 0;
+}
+.sec:active::before{
+    background: #6E7D80;
+}
+.sec:active::after{
+    background: #354548;
+}
+.sec::after{
+    content:'';
+    position: absolute;
+    left: -9px;
+    top: -8px;
+    min-width: calc(100% + 18px);
+    min-height: calc(100% + 12px);
+    background: #6E7D80;
+    clip-path: polygon(
+        0 100%,
+        9px calc(100% - 4px),
+        50% 8px,
+        50% 0
+    );
+    z-index: 0;
+}
+
+
+.secv:active .triangle{
+    background-color:rgba(0, 0, 0, 0.15)
+}
+
+.secv::before{
+    content:'';
+    position: absolute;
+    left: -9px;
+    top: -8px;
+    min-width: calc(100% + 18px);
+    min-height: calc(100% + 12px);
+    background: #6E7D80;
+    clip-path: polygon(
+        0 100%,
+        9px calc(100% - 4px),
+        calc(100% - 9px) calc(100% - 4px),
+        50% 8px,
+        50% 0,
+        100% 100%
+    );
+    z-index: 0;
+}
+.secv:active::before{
+    background:#354548 ;
+}
+.secv:active::after{
+    background:#6E7D80 ;
+}
+.secv::after{
+    content:'';
+    position: absolute;
+    left: -9px;
+    top: -8px;
+    min-width: calc(100% + 18px);
+    min-height: calc(100% + 12px);
+    background: #354548;
+    clip-path: polygon(
+        0 100%,
+        9px calc(100% - 4px),
+        50% 8px,
+        50% 0
+    );
+    z-index: 0;
+}

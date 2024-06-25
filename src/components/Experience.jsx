@@ -41,56 +41,122 @@ export const Experience = () => {
   function OnClick(i) {
     const newOn = on.map((_, il) => il === i)
     setOn(newOn)
-    console.log(newOn)
   }
   return (
     <section className='relative   flex gap-3'>
-      <div className='min-w-28 bg-[#3E5155] flex flex-col items-center justify-between gap-8 p-4' id=' conteiner'>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-          version="1.1"
-          preserveAspectRatio="none"
-          viewBox="10 10 80 80"
-          className='min-w-24 min-h-24 border-4 border-t-white/25 border-l-white/25 border-b-black/25 border-r-black/25 rotate-90'
+      <div className='min-w-28 bg-[#3E5155] flex flex-col items-center gap-5 p-4' id=' conteiner'>
+        <div 
+          className='relative sec cursor-pointer'
+          onClick={()=>{
+            if((on.indexOf(true) + 1) === 1){
+              const newOn = on.map((_, i) => i === 3)
+              setOn(newOn)
+            }else{
+              const newOn = on.map((_, i)=> i === (on.indexOf(true) - 1))
+              setOn(newOn)
+            }
+          }}
         >
-          <g>
-            <rect x="10" y="10" width="80" height="80" fill="#bee3e5" />
-            <path fill="#3E5155" stroke="none" d=" M 90 90 L 90 10 10 10 10 57.85 10 90 65.3 90 90 90 M 54.65 36.05 L 54.65 45.35 45.35 45.35 45.35 54.6 54.65 54.6 54.65 63.85 63.9 63.85 63.9 73.15 54.65 73.15 54.65 63.85 45.35 63.85 45.35 54.6 36.1 54.6 36.1 45.35 45.35 45.35 45.35 36.05 54.65 36.05 54.65 26.8 63.9 26.8 63.9 36.05 54.65 36.05 Z" />
-          </g>
-        </svg>
+          <div className=' triangle ' >
+            {<svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px" y="0px"
+              viewBox="0 0 256 256"
+              enable-background="new 0 0 256 256"
+              xml:space="preserve"
+              className=' -rotate-90 w-full h-9 absolute -bottom-0 z-10 '
+            >
+              <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+              <g>
+                <g>
+                  <path fill="currentColor" d="M60.5,10h33.8v33.4H60.5V10z" />
+                  <path fill="currentColor" d="M94.2,43.4H128v33.8H94.2V43.4L94.2,43.4z" />
+                  <path fill="currentColor" d="M128,77.2h33.8v33.8H128V77.2z" />
+                  <path fill="currentColor" d="M128,144.7h33.8v33.8H128V144.7L128,144.7z" />
+                  <path fill="currentColor" d="M94.2,178.5H128v33.8H94.2V178.5L94.2,178.5z" />
+                  <path fill="currentColor" d="M60.5,212.2h33.8V246H60.5V212.2z" />
+                  <path fill="currentColor" d="M161.8,110.9h33.8v33.8h-33.8V110.9L161.8,110.9z" />
+                </g>
+              </g>
+            </svg>}
+          </div>
+        </div>
         {on.map((o, i) => (
           o
             ? <div
-              className=' items-center justify-center flex  min-w-20 min-h-20 relative shadowOnEXP bg-black/15'
+              className=' items-center justify-center flex  min-w-20 min-h-20 relative shadowOnEXP bg-black/15 cursor-pointer m-1'
               id={`${i}`}
               onClick={() => OnClick(i)}
               key={i}
             >
-              <svg
+              {<svg
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                width="64px"
-              > <path d="M15 2h2v2h4v8h-2v-2H5v10h6v2H3V4h4V2h2v2h6V2zM9 6H5v2h14V6H9zm8 6v2h-4v-2h4zm-4 6h-2v-4h2v4zm4 0h-4v2h6v2h2v-2h-2v-6h-2v4z" fill="currentColor" /> </svg>
+                className='w-12'
+              > <path d="M15 2h2v2h4v8h-2v-2H5v10h6v2H3V4h4V2h2v2h6V2zM9 6H5v2h14V6H9zm8 6v2h-4v-2h4zm-4 6h-2v-4h2v4zm4 0h-4v2h6v2h2v-2h-2v-6h-2v4z" fill="currentColor" /> </svg>}
               <div className='flecha ' />
               <div className='punta' />
               <div className='dar'></div>
             </div>
             : <div
-              className=' min-w-[88px] min-h-[88px] relative shadowEXP border-4 border-transparent flex justify-center items-center'
+              className=' min-w-[88px] min-h-[88px] relative shadowEXP border-4 border-transparent flex justify-center items-center cursor-pointer'
               id={`${i}`}
               onClick={() => OnClick(i)}
               key={i}
             >
-              <svg
+              {<svg
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                width="64px"
-              > <path d="M15 2h2v2h4v18H3V4h4V2h2v2h6V2zm4 6V6H5v2h14zm0 2H5v10h14V10zm-3 2v2h-2v-2h2zm-4 4v-2h2v2h-2zm-2 0h2v2h-2v-2zm0 0H8v-2h2v2z" fill="currentColor" /> </svg>
+                className='w-12'
+              > <path d="M15 2h2v2h4v18H3V4h4V2h2v2h6V2zm4 6V6H5v2h14zm0 2H5v10h14V10zm-3 2v2h-2v-2h2zm-4 4v-2h2v2h-2zm-2 0h2v2h-2v-2zm0 0H8v-2h2v2z" fill="currentColor" /> </svg>}
             </div>
         ))}
+        <div 
+          className='relative secv rotate-180 cursor-pointer '
+          onClick={()=>{
+            if((on.indexOf(true) + 1) === 4){
+              const newOn = on.map((_, i) => i === 0)
+              setOn(newOn)
+            }else{
+              const newOn = on.map((_, i)=> i === (on.indexOf(true) + 1))
+              setOn(newOn)
+            }
+          }}    
+        >
+          <div className=' triangle ' >
+            {<svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px" y="0px"
+              viewBox="0 0 256 256"
+              enable-background="new 0 0 256 256"
+              xml:space="preserve"
+              className=' -rotate-90 w-full -bottom-0 z-10 h-9 absolute'
+            >
+              <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+              <g>
+                <g>
+                  <path fill="currentColor" d="M60.5,10h33.8v33.4H60.5V10z" />
+                  <path fill="currentColor" d="M94.2,43.4H128v33.8H94.2V43.4L94.2,43.4z" />
+                  <path fill="currentColor" d="M128,77.2h33.8v33.8H128V77.2z" />
+                  <path fill="currentColor" d="M128,144.7h33.8v33.8H128V144.7L128,144.7z" />
+                  <path fill="currentColor" d="M94.2,178.5H128v33.8H94.2V178.5L94.2,178.5z" />
+                  <path fill="currentColor" d="M60.5,212.2h33.8V246H60.5V212.2z" />
+                  <path fill="currentColor" d="M161.8,110.9h33.8v33.8h-33.8V110.9L161.8,110.9z" />
+                </g>
+              </g>
+            </svg>}
+          </div>
+        </div>
+        <div className='-m-1 w-24 min-h-24 border-4 border-t-black/25 border-l-black/25 border-b-white/25 border-r-white/25 bg-black/25 font-title text-5xl flex items-center justify-center'>
+          <span className='ml-1'>{on.indexOf(true) + 1}</span>/
+          {on.length}
+        </div>
       </div>
       <div className='bg-[#3E5155] p-4'>
         {
