@@ -2,11 +2,11 @@
 export const ExperiencieItem = ({ title, date, actual, description, link, company }) => {
   return (
     <>
-      <h3 className='font-title text-3xl font-bol pixel-corners px-4 border-4 border-l-black/25 border-t-black/25 border-r-white/25 border-b-white/25 mb-4 bg-black/15'>
+      <h3 className='font-title md:text-xl text-2xl font-bol pixel-corners px-4 border-4 border-l-black/25 border-t-black/25 border-r-white/25 border-b-white/25 mb-4 bg-black/15 overflow-hidden'>
         {title.toUpperCase()}
 
       </h3>
-      <div className='mb-4'>
+      <div className='flex flex-wrap'>
         <span className='text-lg p-2 border-4 border-l-black/25 border-t-black/25 border-r-white/25 border-b-white/25 mb-4 bg-[#4c525f] font-title '>
           {company.toUpperCase()}
         </span>
@@ -24,7 +24,7 @@ export const ExperiencieItem = ({ title, date, actual, description, link, compan
 
       </div>
       <p
-        className=' text-lg font-light font-mono  not-italic border-4 border-l-black/25 border-t-black/25 border-r-white/25 border-b-white/25 mb-4 bg-[#4c525f] p-4'
+        className=' md:text-lg sm:text-base text-sm font-light font-mono  not-italic border-4 border-l-black/25 border-t-black/25 border-r-white/25 border-b-white/25 mb-4 bg-[#4c525f] p-4 w-full'
       >
         {description}
       </p>

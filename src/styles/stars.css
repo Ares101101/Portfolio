@@ -232,13 +232,14 @@ body{
     display: block;
     transform: rotateX(5deg);
     line-height :108px;
-    font-size:154px;
+    font-size: clamp(90px, 20vw, 154px) ;
     color: transparent;
     background: linear-gradient(90deg, #0062a3,#722399,#992329);
     background-clip: text;
     background-size: 200% auto;
     -webkit-background-clip: text;
     animation:  5s linear infinite running animatetitle;
+    overflow: hidden;
 }
 
 @keyframes animatetitle {
@@ -253,10 +254,7 @@ body{
     }
 }
 /*0 0 0 0.6vh rgba(255,255,255,0.1),0 0 0 0.4vh rgba(255,255,255,0.1),0 0 0.8vh rgba(255,255,255,0.1);*/
-.nav{
-    color: #fff;
-    font-size:  27px;
-}
+
 .iconCalendar{
     color: #fff;
     box-shadow: 0 0 0 16px rgba(255, 255, 255, 0.1),0 0 0 8px rgba(255,255,255,0.1),0 0 20px rgba(255,255,255,0.1); 
@@ -362,8 +360,6 @@ body{
         calc(100% - 12px) 12px,
         100% 0,     
         390px  0,
-        378px 12px,
-        12px 12px,
         0 0, 
         0 100% 
         );
@@ -605,7 +601,7 @@ body{
 
 
 .secv:active .triangle{
-    background-color:rgba(0, 0, 0, 0.15)
+    background-color:rgba(0, 0, 0, 0.15);
 }
 
 .secv::before{

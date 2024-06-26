@@ -15,24 +15,24 @@ import MailIcon from "../icons/Mail.astro"
   title="Portfolio de Diego Felix Amachi Flores - Desarrollador y Programador Web"
   description="Desarrollador de software con más de un año de experiencia en el desarrollo web y dos años de experiencia como auxiliar contable. Me especializo en lenguajes de desarrollo web como JavaScript, HTML, CSS, y MySQL, así como en sus distintas bibliotecas y frameworks."
 >
-  <main class="px-4 w-full flex flex-col" data-section="top">
-    <SectionContainer class="h-[calc(100vh-64px)] font-title flex flex-col items-center justify-center mx-auto" id="Sobre-mí">
-      <span class="items-center w-full flex flex-col relative lg:w-[1080px]">
-        <h1 class="titlet" >
+  <main class="px-4 w-full grid grid-cols-1" data-section="top">
+    <SectionContainer class="min-h-screen font-title flex flex-col items-center justify-center mx-auto py-24" id="Sobre-mí">
+      <span class="items-center w-full flex flex-col relative lg:max-w-[1080px]">
+        <h1 class="titlet w-full " >
 
           <a
             href="#"
             target="_blank"
             rel="noopener" 
-            class="title text-center pb-8"
+            class="title text-center pb-8 w-full"
           >
             DIEGO AMACHI F. 
           </a>
         </h1>
-        <h2 class=" font-title text-7xl text-center">
-         -Desarrollador <strong class=" text-blue-600">Web</strong>-
+        <h2 class="w-full font-title md:text-7xl sm:text-4xl text-3xl  text-center">
+         Desarrollador <strong class=" text-blue-600">Web</strong>
         </h2>
-        <nav class="flex gap-x-1 mt-8  flex-1 w-full max-w-3xl bg-transparent p-1">
+        <ul class="flex flex-wrap gap-1 mt-8 w-full max-w-3xl bg-transparent">
           <SocialPill href="https://www.linkedin.com/in/diego-amachi-flores-b1b724217/">
             LinkedIn
           </SocialPill>
@@ -42,38 +42,40 @@ import MailIcon from "../icons/Mail.astro"
           <SocialPill href="mailto:diego.amachiflores@gmail.com">
             Correo  
           </SocialPill>
-        </nav> 
+        </ul> 
       </span>
     </SectionContainer>
     <SectionContainer 
     id="Experiencia" 
-    class=" h-screen  flex flex-col justify-center xl:w-[1066px] px-3 pb-3"
+    class=" min-h-screen grid grid-flow-col my-4 justify-center max-w-[1080px] p-3"
 
     >
-      <article class=" h-full bg-transparent flex flex-col items-start justify-center text-[#BFE4E6]">      
+      <article class=" h-full w-full bg-transparent flex flex-col items-start justify-center text-[#BFE4E6]">      
          
           <h2
-            class="text-4xl font-title  flex justify-center items-center gap-2 bg-[#222825] pb-3"
+            class="subtitle font-title  flex justify-center items-center gap-2 bg-[#222825] pb-3 "
           >
-            <div class=" p-2 bg-[#3E5155] flex justify-center items-center toplshadow relative leftthadow">
+            <strong class=" p-2 bg-[#3E5155] flex justify-center items-center toplshadow relative leftthadow">
               <ExperiencieIcon class=" min-w-12 w-12 " />
-            </div>
+            </strong>
             <div class=" w-4 bg-[#3E5155] h-full topshadow relative">
 
             </div>
-              <strong class="bg-[#3E5155] h-full flex px-4 justify-center items-center toprshadow relative righthadow">EXPERIENCIA</strong>
+            <strong class="bg-[#3E5155] h-full flex px-4 justify-center items-center toprshadow relative righthadow">
+              EXPERIENCIA
+            </strong>
           </h2>
       
-          <article class=" bg-[#222825] rightbhadow relative tlshadow flex gap-3">
+          <article class=" bg-[#222825] rightbhadow relative tlshadow flex gap-3 ">
             
           <Experience  client:visible />
           </article>
       </article>
     </SectionContainer>
 
-    <SectionContainer id="Proyectos" class="h-screen overflow-hidden lg:w-[1080px]">
+    <SectionContainer id="Proyectos"class="min-h-screen font-title flex flex-col items-center justify-center mx-auto max-w-[1080px]">
       <h2
-        class="text-6xl font-title w-full mb-8 border-dashed border-b-4"
+        class="text-6xl w-full font-title mb-8 border-dashed border-b-4"
       >
         <ProyecIcon class="w-12 inline-block mr-4" />
         <span class="align-middle ">
@@ -86,6 +88,12 @@ import MailIcon from "../icons/Mail.astro"
     <SectionContainer class="h-screen overflow-hidden" />
   </main>
 </Layout>
+
+<style>
+  .subtitle{
+    font-size: clamp(20px, 6vw, 36px) ;
+  }
+</style>
 
 {
   /*

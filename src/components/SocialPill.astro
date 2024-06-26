@@ -1,10 +1,17 @@
 ---
 
 ---
-<a class=" bg-y text-xl border-4 border-t-white/50 border-l-white/50 border-b-black/15  border-r-black/15 hover:border-t-black/15 hover:border-l-black/15 hover:border-r-white/50 hover:border-b-white/50 hover:bg-yellow-600/85 hover:pt-1 w-full h-8 flex items-center bg-yellow-600 justify-center " 
-{...Astro.props}
-target="_blank"
-rel="noopener noreferrer"
->
-  <slot/>  
-</a>
+<li class=" h-8 bg-y text-xl border-4 border-t-white/50 border-l-white/50 border-b-black/15  border-r-black/15 hover:border-t-black/15 hover:border-l-black/15 hover:border-r-white/50 hover:border-b-white/50 hover:bg-yellow-600/85 hover:pt-1 w-full flex items-center bg-yellow-600 justify-center card  ">
+  <a  class="h-full w-full flex items-center justify-center truncate"  
+  {...Astro.props}
+  target="_blank"
+  rel="noopener noreferrer"
+  >
+    <slot/>  
+  </a>  
+</li>
+<style>
+  .card{
+  flex: 1 0 calc(32% );
+  }
+</style>

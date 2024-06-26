@@ -44,9 +44,9 @@ export const Experience = () => {
   }
   return (
     <section className='relative   flex gap-3'>
-      <div className='min-w-28 bg-[#3E5155] flex flex-col items-center gap-5 p-4' id=' conteiner'>
+      <div className='min-w-28 bg-[#3E5155] flex flex-col items-center gap-5 p-4 ' id=' conteiner'>
         <div 
-          className='relative sec cursor-pointer'
+          className='relative sec cursor-pointer [&>div>svg]:active:-bottom-1'
           onClick={()=>{
             if((on.indexOf(true) + 1) === 1){
               const newOn = on.map((_, i) => i === 3)
@@ -95,7 +95,7 @@ export const Experience = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                className='w-12'
+                className='w-12 pt-2'
               > <path d="M15 2h2v2h4v8h-2v-2H5v10h6v2H3V4h4V2h2v2h6V2zM9 6H5v2h14V6H9zm8 6v2h-4v-2h4zm-4 6h-2v-4h2v4zm4 0h-4v2h6v2h2v-2h-2v-6h-2v4z" fill="currentColor" /> </svg>}
               <div className='flecha ' />
               <div className='punta' />
@@ -116,7 +116,7 @@ export const Experience = () => {
             </div>
         ))}
         <div 
-          className='relative secv rotate-180 cursor-pointer '
+          className='relative secv rotate-180 cursor-pointer [&>div>svg]:active:bottom-1'
           onClick={()=>{
             if((on.indexOf(true) + 1) === 4){
               const newOn = on.map((_, i) => i === 0)
@@ -164,7 +164,7 @@ export const Experience = () => {
             on[i]
               ? (
                 <li
-                  className=''
+                  className='w-full grid'
                   key={i}
                 >
                   <ExperiencieItem
